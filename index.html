@@ -46,6 +46,17 @@
       margin-top: 1em;
     }
 
+    div.horiz-columns {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      flex-wrap: nowrap;
+    }
+
+    .reveal p + p {
+      margin-top: 2em;
+    }
+
     </style>
 
   </head>
@@ -82,14 +93,30 @@
               <p><a href="http://www.infoq.com/presentations/Simple-Made-Easy">Simple Made Easy</a></p>
               <p>&mdash;Rich Hickey, author of Clojure</p>
             </div>
-            <div>
+            <div class="fragment">
               <p><a href="https://austin2014.drupal.org/session/stomp-complexity">Stomp Complexity</a></p>
               <p>&mdash;Sam Boyer, Drupal developer</p>
             </div>
           </section>
           <section>
-            Simple: From Simplex, "One braid".  Opposite of Complex (or intertwined)
-            Easy: From aise, "lie near".  Opposite of Hard
+            <div class="horiz-columns">
+              <div>
+                <h3>Simple</h3>
+                <ul class="fragment">
+                  <li>From "Simplex"</li>
+                  <li>One braid</li>
+                  <li>Opposite: Complex</li>
+                </ul>
+              </div>
+              <div class="fragment">
+                <h3>Easy</h3>
+                <ul class="fragment">
+                  <li>From "aise"</li>
+                  <li>Lie near</li>
+                  <li>Opposite: Hard</li>
+                </ul>
+              </div>
+            </div>
             <aside class="notes">
               <ul>
                 <li>Simple is objective</li>
@@ -115,11 +142,11 @@
             <p class="fragment">Compose: To place together (not mix)</p>
           </section>
           <section>
-            <q>Simplicity is a prerequisite for reliability</q>
+            <q>Simplicity is a prerequisite for reliability.</q>
             <p>&mdash;Edsger W. Dijkstra</p>
           </section>
           <section>
-            <q>Simplicity is the ultimate sophistication</q>
+            <q>Simplicity is the ultimate sophistication.</q>
             <p>&mdash;Leonardo da Vinci</p>
           </section>
           <section>
@@ -129,36 +156,85 @@
               separation of your many different concerns.</blockquote>
             <p>&mdash;Edsger W. Dijkstra</p>
           </section>
+          <section>
+            <p class="bigtext">The only way to manage complexity<br />is to eliminate it.</p>
+          </section>
         </section>
         <section>
-        </section>
-
-
-        <section>
-          <img src="assets/drupal-8-logo.svg"  style="height: 600px;" alt="Drupal 8" data-credit="https://drupal.org/node/2119739" />
+          <section>
+            <h2>What is scale?</h2>
+          </section>
+          <section>
+            <h3><a href="http://www.teamten.com/lawrence/writings/norris-numbers.html">Norris Numbers</a></h3>
+            <ul>
+              <li class="fragment">&lt; 2K LOC: Any code will do</li>
+              <li class="fragment">20k LOC: Need classes, packages</li>
+              <li class="fragment">200K LOC: Need vigorous focus on simplicity</li>
+              <li class="fragment">2M LOC: ??? <span class="fragment">(functional principles?)</span></li>
+            </ul>
+            <aside class="notes">
+              <ul>
+                <li>Observation by Cliff Norris, documented by John Cook, expanded by Lawrence Kesteloot</li>
+                <li>Approach at one scale v. diff from next scale</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h3>Complexity/LOC</h3>
+            <p>Linear: </p>
+          </section>
+          <section>
+            <div class="horiz-columns">
+              <div>
+                <h3>Democracy</h3>
+                <ul>
+                  <li class="fragment">Direct: A few hundred</li>
+                  <li class="fragment">Republic</li>
+                  <li class="fragment">Federal republic</li>
+                </ul>
+              </div>
+              <div class="fragment">
+                <h3>Dictatorship</h3>
+                <ul>
+                  <li class="fragment">Chieftan: No nobles</li>
+                  <li class="fragment">Kingdom: Nobles with fiefdom</li>
+                  <li class="fragment">Empire: Local governors</li>
+                </ul>
+              </div>
+            </div>
+            <aside class="notes">
+              <ul>
+                <li>Many variations on federal republic</li>
+                <li>US states, French departments, etc.</li>
+                <li>Point is, diff scale, diff govt.</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <p>The approach at one scale is entirely different than the approach at a higher scale.</p>
+          </section>
         </section>
 
 
 
 <div style="display: none;">
 
-  The Tyranny of Structurelessness: http://www.jofreeman.com/joreen/tyranny.htm
+The Tyranny of Structurelessness: http://www.jofreeman.com/joreen/tyranny.htm
 
-  Norris Numbers: http://www.teamten.com/lawrence/writings/norris-numbers.html
-  The approach at one scale is not the same as at another.
+Norris Numbers: http://www.teamten.com/lawrence/writings/norris-numbers.html
+The approach at one scale is not the same as at another.
 
 The Ethics of unpaid labor, Ashe Dryden: http://www.ashedryden.com/blog/the-ethics-of-unpaid-labor-and-the-oss-community
-  Meritocracy -> Do-ocracy -> "rule by those with nothing better to do with their time"
+Meritocracy -> Do-ocracy -> "rule by those with nothing better to do with their time"
 
-  Simple Made Easy: http://www.infoq.com/presentations/Simple-Made-Easy
-  Complecting
-
-
-
-
-
+Simple Made Easy: http://www.infoq.com/presentations/Simple-Made-Easy
+Complecting
 
 </div>
+        <section>
+          <img src="assets/drupal-8-logo.svg"  style="height: 600px;" alt="Drupal 8" data-credit="https://drupal.org/node/2119739" />
+        </section>
+
 
         <section id="final">
           <h2>Larry Garfield</h2>

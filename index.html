@@ -102,11 +102,11 @@
           <section>
             <div>
               <p><a href="http://www.infoq.com/presentations/Simple-Made-Easy">Simple Made Easy</a></p>
-              <p>&mdash;Rich Hickey, author of Clojure</p>
+              <div>&mdash;Rich Hickey, author of Clojure</div>
             </div>
-            <div class="fragment">
+            <div class="fragment" style="margin-top: 1em;">
               <p><a href="https://austin2014.drupal.org/session/stomp-complexity">Stomp Complexity</a></p>
-              <p>&mdash;Sam Boyer, Drupal developer</p>
+              <div>&mdash;Sam Boyer, Drupal developer</div>
             </div>
           </section>
           <section>
@@ -200,7 +200,8 @@
           </section>
           <section>
             <h3>Complexity/LOC</h3>
-            <p>Linear: </p>
+            <p class="fragment">Simple code has linear complexity</p>
+            <p class="fragment">Complected code has geometric complexity</p>
           </section>
           <section>
             <div class="horiz-columns">
@@ -340,7 +341,7 @@
           </section>
           <section>
             <p>There is no such thing as structureless.</p>
-            <p class="fragment">Informal structure is extremely complex inefficient.</p>
+            <p class="fragment">Informal structure is extremely complex &amp; inefficient.</p>
           </section>
         </section>
         <section>
@@ -504,6 +505,7 @@
               <ul>
                 <li>Initiative lead!</li>
                 <li>Jacine flamed out years ago (bikeshed city!)</li>
+                <li>How many core devs survive 2+ releases?</li>
               </ul>
             </aside>
           </section>
@@ -514,7 +516,7 @@
             <aside class="notes">
               <ul>
                 <li>Decision making by attrition</li>
-                <li>Burn out one dev, there's more volunteers waiting (Hickley)</li>
+                <li>Burn out one dev, there's more volunteers waiting (Hickey)</li>
               </ul>
             </aside>
           </section>
@@ -537,54 +539,121 @@
             </aside>
           </section>
           <section>
-            <p>The complexity of Drupal core is a direct and inevitable result of the complexity of the Drupal development process.</p>
-            <p class="fragment">The only way to manage complexityis to eliminate it.</p>
+            <p>Drupal the code base inherits all of<br />the complexity of Drupal the community</p>
+            <div class="fragment">
+              <blockquote>organizations which design systems ... are constrained
+                to produce designs which are copies of the communication structures
+                of these organizations
+              </blockquote>
+              <p>&mdash;<a href="http://en.wikipedia.org/wiki/Conway%27s_law">Conway's Law</a>, 1968 (Melvin Conway)</p>
+            </div>
+          </section>
+          <section>
+            <p>The only way to manage complexity is to eliminate it.</p>
+            <aside class="notes">
+              <ul>
+                <li>Elim complexity in code by elim in community</li>
+              </ul>
+            </aside>
           </section>
           <section>
             <h2>Clear</h2>
             <h2 class="fragment">Decoupled</h2>
             <h2 class="fragment">Structure</h2>
+            <aside class="notes">
+              <ul>
+                <li>Code *and* community, together</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <img src="assets/drupal-8-logo.svg"  style="height: 600px;" alt="Drupal 8" data-credit="https://drupal.org/node/2119739" />
+            <aside class="notes">
+              <ul>
+                <li>2 steps forward, 1 steps back</li>
+              </ul>
+            </aside>
           </section>
         </section>
         <section>
           <section>
+            <h3>How?</h3>
+            <p>More than framework vs. app</p>
+            <p class="fragment">Joomla did that.  <span class="fragment">It was bad...</span></p>
+          </section>
+          <section>
+            <h3>Largest OSS projects</h3>
+            <ul>
+              <li>Linux</li>
+              <li>KDE</li>
+              <li>Apache</li>
+              <li>Eclipse</li>
+              <li>Drupal</li>
+              <li>Gnome</li>
+              <li>Perl+CPAN</li>
+              <li>Mozilla+Addons</li>
+              <li>GNU</li>
+            </ul>
+            <p class="fragment"><a href="http://openlife.cc/blogs/2010/november/how-grow-your-open-source-project-10x-and-revenues-5x">10x larger than others</a> (2010)</p>
+          </section>
+          <section>
+            <h3>Commonalities</h3>
+            <ul>
+              <li class="fragment">Community projects, not corp</li>
+              <li class="fragment">Foundation governance</li>
+              <li class="fragment">Highly modular/collections</li>
+            </ul>
+            <aside class="notes">
+              <li>Emphasis modularity</li>
+              <li>Tried to contact, didn't get responses</li>
+            </aside>
+          </section>
+          <section>
+            <h2>Linux</h2>
+            <ul>
+              <li class="fragment">Linus doesn't merge patches</li>
+              <li class="fragment">Component maintainers merge patches</li>
+              <li class="fragment">Linus merges changesets</li>
+              <li class="fragment">Most components are decomplected</li>
+            </ul>
+          </section>
+          <section>
+            <p>Drupal needs to be a composition of components,<br />not a complection of components</p>
+            <p class="fragment">The code and the community.</p>
+          </section>
+          <section>
+            <p style="margin-bottom: 1em;" >Respect subsystem maintainer authoratah!</p>
+            <q style="margin-top: 1em;" class="fragment">But how do we do patches across modules/systems?</q>
+            <p style="margin-top: 1em;" class="fragment">That we need to is the problem...</p>
+            <aside class="notes">
+              <ul>
+                <li>Make complection more painful</li>
+                <li>Force decomplection</li>
+                <li>Just like new BC policy</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
             <div>
-              <p><a href="https://austin2014.drupal.org/session/danger-having-no-why">The Danger of Having no Why</a></p>
-              <p>&mdash;Emma Jane Westby</p>
+              <p><a href="https://medium.com/@sdboyer/keeping-it-simple-944526c5b7fb">Keeping it Simple</a></p>
+              <div>&mdash;Sam Boyer</div>
+              <ul style="margin-top: 1em;">
+                <li class="fragment">"Simplifier" role</li>
+                <li class="fragment">Keeper of simplicity/quality in focused area</li>
+                <li class="fragment">Ignore release dates, global strategy</li>
+                <li class="fragment">Not interested in "features"</li>
+                <li class="fragment">Partner with "Easy" people</li>
+              </ul>
             </div>
           </section>
+          <section>
+            <p class="bigtext">Brutal focus on simplicity</p>
+            <p class="bigtext fragment">At all levels</p>
+            <p class="bigtext fragment">Even at the cost of easy or features</p>
+          </section>
         </section>
-
-
-
-
-<div style="display: none;">
-
-The Tyranny of Structurelessness: http://www.jofreeman.com/joreen/tyranny.htm
-
-Norris Numbers: http://www.teamten.com/lawrence/writings/norris-numbers.html
-The approach at one scale is not the same as at another.
-
-The Ethics of unpaid labor, Ashe Dryden: http://www.ashedryden.com/blog/the-ethics-of-unpaid-labor-and-the-oss-community
-Meritocracy -> Do-ocracy -> "rule by those with nothing better to do with their time"
-
-Simple Made Easy: http://www.infoq.com/presentations/Simple-Made-Easy
-Complecting
-
-  Emma Jane Westby https://austin2014.drupal.org/session/danger-having-no-why
-
-</div>
         <section>
-          <img src="assets/drupal-8-logo.svg"  style="height: 600px;" alt="Drupal 8" data-credit="https://drupal.org/node/2119739" />
-        </section>
-
-
-        <section id="final">
-          <h2>Larry Garfield</h2>
-          <p>Senior Architect, <a href="http://www.palantir.net/">Palantir.net</a></p>
-          <p>Let's Make Something Good Together.</p>
-          <p>Keep tabs on our work at <a href="http://twitter.com/Palantir">@Palantir</a></p>
-          <p>Want to hear about <a href="http://eepurl.com/ws6uj">what we're doing</a>?</p>
+          <h1>Discuss</h1>
         </section>
       </div>
     </div>
